@@ -1,6 +1,7 @@
 import "./../scss/style.scss";
 import { Content } from "./Models/Content";
 
+
 const createBlogPostButton = document.getElementById("CreateBlogPost") as HTMLButtonElement;
 const blogContent = document.getElementById("BloggContent") as HTMLDivElement;
 
@@ -32,22 +33,14 @@ createBlogPostButton?.addEventListener("click", () => {
   
   const titleFromUser = titleInput.value;
   const textFromUser = textInput.value;
-  const categoryFromUser = categoryInput.value; 
-
-  const newContent = new Content(titleFromUser, textFromUser, categoryFromUser);
-  blogPosts.push(newContent);
-  console.log(newContent);
-
-  createHTML ();
- 
-//   const blogPostElement = document.createElement("div");
-//   blogPostElement.id ="cardPost"
-//   blogPostElement.className = "card";
-//   blogPostElement.innerHTML = `<h5>${newContent.title}</h5><p>${newContent.text}</p><h7 id="categoryText">${newContent.category}</h7><a href="#" id="goSomewhereButton" class="btn btn-primary"
-//   >Go somewhere</a`;
+  const categoryFromUser = categoryInput.value;
 
   
-//   blogContent?.appendChild(blogPostElement);
+  const newContent = new Content(titleFromUser, textFromUser, categoryFromUser);
+  blogPosts.push(newContent);
+    console.log(newContent);
+
+    createHTML ();
 
 });
 
