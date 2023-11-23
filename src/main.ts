@@ -1,24 +1,29 @@
 import "./../scss/style.scss";
 import { Content } from "./Models/Content";
 
-
-
-const titleInput = document.getElementById("modal-input-title") as HTMLInputElement;
-const titleFromUser = titleInput.value;
-
-const textInput = document.getElementById("modal-input-text") as HTMLInputElement;
-const textFromUser = textInput.value;
-
-const categoryInput = document.getElementById("SortButton") as HTMLSelectElement;
-const categoryFromUser = categoryInput.value;
-
-const bloggPosted = document.createElement("div");
-bloggPosted.className = "card";
-bloggPosted.innerHTML = `<h2>${titleFromUser}</h2><p>${textFromUser}</p><h4>${categoryFromUser}</h4>` ;
-
+const createBlogPostButton = document.getElementById("CreateBlogPost");
 const blogContent = document.getElementById("BloggContent");
-const createBlogPost = document.getElementById("createBlogPost");
-createBlogPost?.addEventListener("click", ()=>{
-blogContent?.appendChild(bloggPosted);
-});
 
+createBlogPostButton?.addEventListener("click", () => {
+  const titleInput = document.getElementById("modal-input-title") as HTMLInputElement;
+  const textInput = document.getElementById("modal-input-text") as HTMLInputElement;
+  const categoryInput = document.getElementById("SortButton") as HTMLSelectElement;
+
+  
+  const titleFromUser = titleInput.value;
+  const textFromUser = textInput.value;
+  const categoryFromUser = categoryInput.value;
+
+  
+  const newContent = new Content(titleFromUser, textFromUser, categoryFromUser);
+    console.log(newContent);
+    
+ 
+  const blogPostElement = document.createElement("div");
+  blogPostElement.className = "card";
+  
+  blogPostElement.innerHTML = `<h2>${newContent.title}</h2><p>${newContent.text}</p><h4>${newContent.category}</h4>`;
+
+  
+  blogContent?.appendChild(blogPostElement);
+});
