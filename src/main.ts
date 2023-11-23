@@ -5,8 +5,8 @@ import { Content } from "./Models/Content";
 const createBlogPostButton = document.getElementById("CreateBlogPost") as HTMLButtonElement;
 const blogContent = document.getElementById("BloggContent") as HTMLDivElement;
 
-let blogPosts:Content[] = []
-console.log(blogPosts);
+let blogPosts:Content[] =  []
+
 
 function createHTML () {
     blogContent.innerHTML="";
@@ -21,7 +21,9 @@ function createHTML () {
       
         
         blogContent?.appendChild(blogPostElement);
+       
     }
+    console.log(blogPosts);
 }
 
 createBlogPostButton?.addEventListener("click", () => {
