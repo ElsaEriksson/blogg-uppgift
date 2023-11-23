@@ -1,8 +1,10 @@
 import "./../scss/style.scss";
 import { Content } from "./Models/Content";
 
+
 const createBlogPostButton = document.getElementById("CreateBlogPost");
 const blogContent = document.getElementById("BloggContent");
+
 
 createBlogPostButton?.addEventListener("click", () => {
   const titleInput = document.getElementById("modal-input-title") as HTMLInputElement;
@@ -13,13 +15,14 @@ createBlogPostButton?.addEventListener("click", () => {
   const titleFromUser = titleInput.value;
   const textFromUser = textInput.value;
   const categoryFromUser = categoryInput.value;
-
+  const newContentArray: Content[] = [new Content(titleFromUser, textFromUser, categoryFromUser)]
+  console.log(newContentArray);
   
+
   const newContent = new Content(titleFromUser, textFromUser, categoryFromUser);
     console.log(newContent);
 
-    
-    
+
  
   const blogPostElement = document.createElement("div");
   blogPostElement.id ="cardPost"
