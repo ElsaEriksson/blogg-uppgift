@@ -10,12 +10,13 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+
     <!-- Font Awesome -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
-    <title>Blogg</title>
+    <title>Djurblogg?</title>
   </head>
   <body>
     <!-- Button trigger modal -->
@@ -54,11 +55,7 @@
           </div>
           <div class="modal-body">
             <div id="modal-create">
-              <form
-                id="modal-form"
-                action=""
-                onsubmit="createPost(); return false;"
-              >
+              <form id="modal-form" action="">
                 <input
                   class="modal-input-class"
                   id="modal-input-title"
@@ -107,19 +104,19 @@
         </div>
       </div>
     </div>
-
-    <nav class="nav nav-pills nav-fill">
-      <a class="nav-link active" aria-current="page" href="#BigHeader"
-        >BigHeader</a
-      >
-      <a class="nav-link" href="#BloggContent">BloggContent</a>
-      <a class="nav-link" href="#socials">socials</a>
-      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    <nav class="navbar sticky-top bg-body-tertiary">
+      <div class="container-fluid">
+        <a id="Navbutton" class="navbar-brand" href="#BigHeader">Start</a>
+        <a id="Navbutton" class="navbar-brand" href="#BloggContent"
+          >Blog Posts</a
+        >
+        <a id="Navbutton" class="navbar-brand" href="#socials">Socials</a>
+      </div>
     </nav>
 
     <header id="BigHeaderContainer">
       <div id="BigHeader">
-        <h1 id="HeaderH1">Hejsan</h1>
+        <h1 id="HeaderH1">Djurblogg eller något...?</h1>
       </div>
     </header>
 
@@ -155,9 +152,9 @@
       </div>
     </main>
 
-    <footer class="bg-light text-center text-white">
+    <footer id="footer" class="bg-light text-center text-white">
       <!-- Grid container -->
-      <div class="container p-4 pb-0">
+      <div id="socials" class="container p-4 pb-0">
         <!-- Section: Social media -->
         <section class="mb-4">
           <!-- Facebook -->

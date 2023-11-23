@@ -16,13 +16,19 @@ function createHTML () {
         const blogPostElement = document.createElement("div");
         blogPostElement.id ="cardPost"
         blogPostElement.className = "card";
-        blogPostElement.innerHTML = `<h5>${newContent.title}</h5><p>${newContent.text}</p><h7 id="categoryText">${newContent.category}</h7><a href="#" id="goSomewhereButton" class="btn btn-primary"
-        >Go somewhere</a`;
-      
+        blogPostElement.innerHTML = `<h5>${newContent.title}
+        </h5><p>${newContent.text}</p>
+        <h7 id="categoryText">${newContent.category}</h7>
+        <a href="#" id="goSomewhereButton" 
+        class="btn btn-primary"
+        >Go somewhere</a>
+        <button type="button" class="btn btn-danger">Delete</button>`;
         
-        blogContent?.appendChild(blogPostElement);
+
+      blogContent?.appendChild(blogPostElement);
        
     }
+    
     console.log(blogPosts);
 }
 
