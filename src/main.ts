@@ -27,4 +27,3 @@ createBlogPostButton?.addEventListener("click", () => {
   
   blogContent?.appendChild(blogPostElement);
 });
-
