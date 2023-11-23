@@ -1,0 +1,67 @@
+body {
+    padding: 25px;
+    
+
+}
+
+#BigHeaderContainer{
+    display: flex;
+    height: 40vh;
+    width: 100%;
+    
+    align-items: center;
+    justify-content: center;
+
+
+}
+#BigHeader{
+    display: flex;
+    border: 2px rgb(72, 68, 68) solid;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+}
+#HeaderH1{
+    text-align: center;
+}
+#BloggContainer{
+    width: 100%;
+    
+}
+#BloggContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#Sort{
+    display: flex;
+    flex-direction: row;
+
+}
+#PlusButton{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+}
+#modal-form{
+    display: flex;
+    flex-direction: column;
+}
+.modal-input-class{
+    height: 50px;
+}
+#modal-input-title{
+
+}
+#modal-input-text{
+    min-height: 100px;
+    height: fit-content;
+    
+}
+#modal-input-category{
+
+}
