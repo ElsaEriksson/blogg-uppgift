@@ -7,7 +7,7 @@ const blogContent = document.getElementById("BloggContent");
 createBlogPostButton?.addEventListener("click", () => {
   const titleInput = document.getElementById("modal-input-title") as HTMLInputElement;
   const textInput = document.getElementById("modal-input-text") as HTMLInputElement;
-  const categoryInput = document.getElementById("SortButton") as HTMLSelectElement;
+  const categoryInput = document.getElementById("Category") as HTMLSelectElement;
 
   
   const titleFromUser = titleInput.value;
@@ -17,12 +17,15 @@ createBlogPostButton?.addEventListener("click", () => {
   
   const newContent = new Content(titleFromUser, textFromUser, categoryFromUser);
     console.log(newContent);
+
+    
     
  
   const blogPostElement = document.createElement("div");
+  blogPostElement.id ="cardPost"
   blogPostElement.className = "card";
-  
-  blogPostElement.innerHTML = `<h2>${newContent.title}</h2><p>${newContent.text}</p><h4>${newContent.category}</h4>`;
+  blogPostElement.innerHTML = `<h5>${newContent.title}</h5><p>${newContent.text}</p><h7 id="categoryText">${newContent.category}</h7><a href="#" id="goSomewhereButton" class="btn btn-primary"
+  >Go somewhere</a`;
 
   
   blogContent?.appendChild(blogPostElement);

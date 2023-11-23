@@ -73,12 +73,20 @@
                   rows="8"
                 />
                 <div id="modal-input-category">
-                  <p>Sortera:</p>
-                  <select id="SortCategory">
-                    <option>Välj kategori:</option>
-                    <option>Katt</option>
-                    <option>Hund</option>
-                    <option>Fisk</option>
+                  <select id="Category">
+                    <p>kategori</p>
+                    <option id="categoryText" value="kategori ej vald!">
+                      Välj kategori:
+                    </option>
+                    <option id="categoryText" value="kategori: Papegoja">
+                      Papegoja
+                    </option>
+                    <option id="categoryText" value="kategori: Hund">
+                      Hund
+                    </option>
+                    <option id="categoryText" value="kategori: Katt">
+                      Katt
+                    </option>
                   </select>
                 </div>
               </form>
@@ -122,17 +130,12 @@
 
     <div id="Sort">
       <p>Sortera:</p>
-      <select id="SortButton">
-        <option>Välj</option>
-        <option>kategori</option>
-        <option>titel</option>
-      </select>
+      <select id="SortButton"></select>
     </div>
 
     <main id="BloggContainer">
       <div id="BloggContent">
-        <div id="cardPost" class="card" style="width: 78rem">
-          <img src="..." class="card-img-top" alt="..." />
+        <div id="cardPost" class="card">
           <div id="card-body-post" class="card-body">
             <h5 id="card-title-post" class="card-title">Card title</h5>
             <p id="card-text-post" class="card-text">
@@ -142,8 +145,7 @@
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
-        <div class="card" style="width: 78rem">
-          <img src="..." class="card-img-top" alt="..." />
+        <div id="cardPost" class="card">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">

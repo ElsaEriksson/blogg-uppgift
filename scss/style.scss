@@ -35,6 +35,8 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 #Sort{
     display: flex;
@@ -65,4 +67,11 @@ body {
 #modal-input-category{
 
 }
+#categoryText{
+    
+    font-weight: 600;
+}
 
+#cardPost{
+    width: 1100px;
+}
