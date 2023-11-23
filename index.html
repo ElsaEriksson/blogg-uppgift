@@ -54,7 +54,11 @@
           </div>
           <div class="modal-body">
             <div id="modal-create">
-              <form id="modal-form" action="">
+              <form
+                id="modal-form"
+                action=""
+                onsubmit="createPost(); return false;"
+              >
                 <input
                   class="modal-input-class"
                   id="modal-input-title"
@@ -66,14 +70,14 @@
                   id="modal-input-text"
                   type="text"
                   placeholder="text"
+                  rows="8"
                 />
                 <div id="modal-input-category">
                   <p>Sortera:</p>
-                  <select id="SortButton">
+                  <select id="SortCategory">
                     <option>Välj kategori:</option>
                     <option>Katt</option>
                     <option>Hund</option>
-
                     <option>Fisk</option>
                   </select>
                 </div>
@@ -88,7 +92,12 @@
             >
               Stäng
             </button>
-            <button id="CreateBlogPost" type="button" class="btn btn-primary">
+            <button
+              id="CreateBlogPost"
+              type="button"
+              class="btn btn-primary"
+              onclick="createPost ()"
+            >
               Skapa +
             </button>
           </div>
@@ -122,11 +131,11 @@
 
     <main id="BloggContainer">
       <div id="BloggContent">
-        <div class="card" style="width: 78rem">
+        <div id="cardPost" class="card" style="width: 78rem">
           <img src="..." class="card-img-top" alt="..." />
-          <div id="" class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
+          <div id="card-body-post" class="card-body">
+            <h5 id="card-title-post" class="card-title">Card title</h5>
+            <p id="card-text-post" class="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
@@ -141,7 +150,9 @@
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="#" id="goSomewhereButton" class="btn btn-primary"
+              >Go somewhere</a
+            >
           </div>
         </div>
       </div>
