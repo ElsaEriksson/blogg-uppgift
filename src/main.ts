@@ -25,8 +25,8 @@ function createHTML() {
     blogPostElement.innerHTML = `<h5>${newContent.title}
     </h5><p>${newContent.text}</p>
     <h7 id="categoryText">${newContent.category}</h7>
-    <a href="#modal2" id="goButton" 
-    class="btn btn-primary" 
+    <a href="#modal2" id="goButton"
+    class="btn btn-primary"
     data-bs-toggle="modal"
     data-bs-target="#staticBackdrop2"
     >Go somewhere</a>`;
