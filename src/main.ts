@@ -27,6 +27,7 @@ function createHTML () {
         class="btn btn-primary"
         >Go somewhere</a>`;
         //<button id="deleteButton" type="button" class="btn btn-danger">Delete</button>;
+        
         const deleteButton = document.createElement("button") as HTMLButtonElement;
         deleteButton.id= "deleteButton";
         deleteButton.className= "btn btn-danger";
