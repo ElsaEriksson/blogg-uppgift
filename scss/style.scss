@@ -1,19 +1,14 @@
 body {
     padding: 25px;
     font-family:Arial, Helvetica, sans-serif;
-    
-    
 }
 
 #BigHeaderContainer{
     display: flex;
     height: 40vh;
     width: 100%;
-    
     align-items: center;
     justify-content: center;
-
-
 }
 #BigHeader{
     display: flex;
@@ -24,20 +19,19 @@ body {
     align-items: center;
     justify-content: center;
     background-image: url(../pictures/katt-bakgrund-1920-x-1080-u7wcy8c5vnfl23ya.jpg);
-    
     background-position: center;
     background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
 }
 #HeaderH1{
     text-align: center;
     font-size: 85px;
     opacity: 0.8;
-
-
 }
 #BloggContainer{
     width: 100%;
-    
+
 }
 #BloggContent{
     display: flex;
@@ -50,13 +44,11 @@ body {
 #Sort{
     display: flex;
     flex-direction: row;
-
 }
 #PlusButton{
     position: fixed;
     bottom: 0;
     right: 0;
-
 }
 #modal-form{
     display: flex;
@@ -70,14 +62,12 @@ body {
 }
 #modal-input-text{
     min-height: 100px;
-    height: fit-content;
-    
+    height: fit-content;   
 }
 #modal-input-category{
 
 }
 #categoryText{
-    
     font-weight: 600;
 }
 
