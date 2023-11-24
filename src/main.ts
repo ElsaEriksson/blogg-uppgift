@@ -23,15 +23,26 @@ function createHTML () {
         blogPostElement.innerHTML = `<h5>${newContent.title}
         </h5><p>${newContent.text}</p>
         <h7 id="categoryText">${newContent.category}</h7>
-        <a href="#" id="goSomewhereButton" 
+        <a href="#" id="goButton" 
         class="btn btn-primary"
         >Go somewhere</a>`;
         //<button id="deleteButton" type="button" class="btn btn-danger">Delete</button>;
+        const goButton = document.getElementById("goButton")
+        goButton?.addEventListener("click", ()=>{
+          const goSomewhereButton = document.getElementById("goSomewhereButton")as HTMLDivElement;
+          blogContent.appendChild(goSomewhereButton);
+          createHTML();
+        }
+        
+        );
+
         const deleteButton = document.createElement("button") as HTMLButtonElement;
         deleteButton.id= "deleteButton";
         deleteButton.className= "btn btn-danger";
         deleteButton.type= "button";
         deleteButton.innerHTML="Delete"
+        deleteButton
+
         
           deleteButton.addEventListener("click", () => {
             blogPosts.splice(index, 1);
