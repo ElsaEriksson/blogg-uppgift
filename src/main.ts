@@ -28,20 +28,7 @@ function createHTML () {
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop2"
         >Go somewhere</a>`;
-        //<button id="deleteButton" type="button" class="btn btn-danger">Delete</button>;
-        
-        
-        
-        const goButton = document.createElement("button") as HTMLButtonElement;
-        goButton.id= "goButton";
-        goButton.className= "btn btn-danger";
-        goButton.type= "button";
-        goButton.innerHTML="Delete"
-        goButton?.setAttribute("data-toggle", "modal")
-        goButton?.setAttribute("data-target", "#staticBackdrop2")
 
-        
-        
         
         const deleteButton = document.createElement("button") as HTMLButtonElement;
         deleteButton.id= "deleteButton";
