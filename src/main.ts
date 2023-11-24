@@ -5,8 +5,12 @@ import { Content } from "./Models/Content";
 const createBlogPostButton = document.getElementById("CreateBlogPost") as HTMLButtonElement;
 const blogContent = document.getElementById("BloggContent") as HTMLDivElement;
 
-let blogPosts:Content[] =  []
+let blogPosts:Content[] =  [];
 
+
+  blogPosts = JSON.parse(localStorage.getItem("Blogposts") || "[]");
+
+createHTML();
 
 function createHTML () {
     blogContent.innerHTML="";
@@ -21,16 +25,27 @@ function createHTML () {
         <h7 id="categoryText">${newContent.category}</h7>
         <a href="#" id="goSomewhereButton" 
         class="btn btn-primary"
-        >Go somewhere</a>
-        <button type="button" class="btn btn-danger">Delete</button>`;
+        >Go somewhere</a>`;
+        //<button id="deleteButton" type="button" class="btn btn-danger">Delete</button>;
+        const deleteButton = document.createElement("button") as HTMLButtonElement;
+        deleteButton.id= "deleteButton";
+        deleteButton.className= "btn btn-danger";
+        deleteButton.type= "button";
+        deleteButton.innerHTML="Delete"
         
+          deleteButton.addEventListener("click", () => {
+            blogPosts.splice(index, 1);
+           createHTML();
+          });
+          blogPostElement.appendChild(deleteButton);
+          blogContent?.appendChild(blogPostElement);
+        };
 
-      blogContent?.appendChild(blogPostElement);
-       
+        localStorage.setItem("Blogposts", JSON.stringify(blogPosts));
+        console.log(blogPosts);
     }
-    
-    console.log(blogPosts);
-}
+
+  
 
 createBlogPostButton?.addEventListener("click", () => {
   createBlogPostButton.type = "submit";
@@ -51,4 +66,5 @@ createBlogPostButton?.addEventListener("click", () => {
     createHTML ();
 
 });
+
 
