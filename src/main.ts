@@ -7,15 +7,17 @@ const createBlogPostButton = document.getElementById(
 const blogContent = document.getElementById("BloggContent") as HTMLDivElement;
 
 let blogPosts: Content[] = [];
+let filteredPosts: Content[] = [];
 
 blogPosts = JSON.parse(localStorage.getItem("Blogposts") || "[]");
+filteredPosts = blogPosts;
 
 createHTML();
 
 function createHTML() {
   blogContent.innerHTML = "";
-  for (let index = 0; index < blogPosts.length; index++) {
-    const newContent = blogPosts[index];
+  for (let index = 0; index < filteredPosts.length; index++) {
+    const newContent = filteredPosts[index];
 
     const blogPostElement = document.createElement("div");
     blogPostElement.id = "cardPost";
@@ -70,9 +72,26 @@ createBlogPostButton?.addEventListener("click", () => {
   Modal2.innerHTML = textFromUser;
   Modal3.innerHTML = categoryFromUser;
 
-  const newContent = new Content(titleFromUser, textFromUser, categoryFromUser);
+  const newContent = new Content(
+    titleFromUser,
+    textFromUser,
+    categoryFromUser,
+    new Date()
+  );
   blogPosts.push(newContent);
-  console.log(newContent);
 
   createHTML();
+});
+
+const sortButton = document.getElementById("SortButton") as HTMLSelectElement;
+sortButton.addEventListener("change", (e: any) => {
+  // blogPosts.sort((a, b) => {
+  //   if (a.category.toLowerCase() > b.category.toLowerCase()) return 1;
+  //   else return -1;
+  // });
+  filteredPosts = blogPosts.filter((p) => {
+    if (p.category === e.target.value) return p;
+  });
+  createHTML();
+  console.log(filteredPosts);
 });
